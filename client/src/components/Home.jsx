@@ -35,12 +35,12 @@ export default function Home(props) {
                      link={'https://doi.org/10.1123/ijsnem.11.1.109'}>
         </HomeSummary>
 
-        <HomeSummary title={'Build a Workout'}
+        <HomeSummary title={'findings'}
                      subtitle={''}
-                     summary={'Exercise has a profound effect on muscle growth, which can occur only if muscle protein synthesis exceeds muscle protein breakdown; there must be a positive muscle protein balance. Resistance exercise improves muscle protein balance, but, in the absence of food intake, the balance remains negative (i.e., catabolic). The response of muscle protein metabolism to a resistance exercise bout lasts for 24-48 hours; thus, the interaction between protein metabolism and any meals consumed in this period will determine the impact of the diet on muscle hypertrophy.'} 
-                     imgpath={'imgs/articles1_350x350.png'}
-                     imgalt={'An assortment of healthy, whole foods'}
-                     link={'https://doi.org/10.1123/ijsnem.11.1.109'}>
+                     summary={'Access blog posts updating and reflecting on recent research on strength science!'} 
+                     imgpath={'imgs/findings3_350x350.jpg'}
+                     imgalt={'Cartoon muscle filled with raw meat'}
+                     link={''}>
         </HomeSummary>
     </div>
     )
