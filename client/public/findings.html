@@ -1,0 +1,93 @@
+<!DOCTYPE html> <!-- tells server that this is an html document-->
+<html lang="en"> <!-- html doc starts -->
+  <head> <!-- head keeps metadata. wont be shown on page -->
+    <meta charset="utf-8"> <!-- encoding language utf-8 is standard -->
+    <title>Findings: Strength Science</title>
+    <link rel="stylesheet" href="css/styles.css"> <!-- link style sheet -->
+  </head>
+
+  <body> <!-- body start: anything in body will be rendered on page -->
+    
+    <header> <!-- menu / navigation -->
+      <nav>
+        <a href="index" aria-label="Home"><strong>Strength Science</strong></a>
+        <a href="articles" aria-label="Articles">Articles</a>
+        <a href="findings" class="active" aria-label="Findings">Findings</a>
+        <a href="about" aria-label="About">About</a>
+        <a href="#contact" aria-label="Contact">Contact</a>
+      </nav>
+    </header>
+    
+    <div class="dropdown">
+      <button id="fontcontrol">
+        <span class="small">A</span>
+        <span class="large">A</span>
+      </button>
+      <div id="dropdown-content">
+          <div class="font-size-options">
+            <a href="#" onclick="changeFontSize('decrease')"><span class="small">A</span></a>
+            <a href="#" onclick="changeFontSize('default')"><span class="medium">A</span></a>
+            <a href="#" onclick="changeFontSize('increase')"><span class="large">A</span></a>
+          </div>
+          <div class="font-style-options">
+              <a href="#" onclick="changeFontStyle('serif')" style="font-family: serif;">Serif</a>
+              <a href="#" onclick="changeFontStyle('sans-serif')" style="font-family: sans-serif;">Sans</a>
+          </div>
+      </div>
+    </div>
+
+    <main> <!-- main content of page -->
+      <div class="page-header">
+        <h2 class="topic">Findings from Strength Science</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+      </div>
+      <div class="article-content"> <!--for consistent spacing among pages-->
+        <div class="findings-info">
+          <img src="imgs/findings3_300x250.jpg" alt="A cartoon muscle filled with meats and other proteins" id="finding1-img">
+          <div class="text-content">
+            <h5><a href="findings/finding1.html">Finding 1</a></h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam maecenas sed enim ut sem viverra aliquet eget. Sit amet commodo nulla facilisi nullam vehicula ipsum a arcu. Eget egestas purus viverra accumsan in.</p>
+          </div>
+        </div>
+        
+        <div class="findings-info reverse">
+          <img src="imgs/finding_1_350x200.jpg" alt="Hands holding a salad on a plate" id="finding2-img">
+          <div class="text-content">
+            <h5><a href="#">Finding 2</a></h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam maecenas sed enim ut sem viverra aliquet eget. Sit amet commodo nulla facilisi nullam vehicula ipsum a arcu. Eget egestas purus viverra accumsan in.</p>
+          </div>
+        </div>
+
+        <div class="findings-info">
+          <img src="imgs/findings2_300x250.jpg" alt="Woman holding a protein shake" id="finding2-img">
+          <div class="text-content">
+            <h5><a href="#">Finding 3</a></h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam maecenas sed enim ut sem viverra aliquet eget. Sit amet commodo nulla facilisi nullam vehicula ipsum a arcu. Eget egestas purus viverra accumsan in.</p>
+          </div>
+        </div>
+
+        <div class="findings-info reverse">
+          <img src="imgs/finding_4_300x250.jpeg" alt="Protein powder spilling onto a table" id="finding2-img">
+          <div class="text-content">
+            <h5><a href="#">Finding 4</a></h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Diam maecenas sed enim ut sem viverra aliquet eget. Sit amet commodo nulla facilisi nullam vehicula ipsum a arcu. Eget egestas purus viverra accumsan in.</p>
+          </div>
+        </div>
+
+      </div>
+
+
+    </main>
+
+    <footer> <!-- footer content -->
+      <div class="footer-container">
+        <h2 id="contact">Contact</h2>
+        <div class="contact-info">
+          <img src="imgs/logo_50px.jpeg" alt="Strength Science Logo" id="logo">
+          <p>Email: <a href="Lorem ipsum dolor sit amet">Lorem ipsum dolor sit amet</a></p>
+        </div>
+        </div>
+    </footer> <!-- footer end -->
+    <script src="assets/js/main.js"></script> <!---link javascript-->
+  </body> <!-- body end -->
+</html> <!-- html doc ends -->
