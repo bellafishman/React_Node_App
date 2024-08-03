@@ -47,7 +47,13 @@ export default function Articles() {
 
     const handleApiSearch = async (newSearch) => {
         try {
-            const response = await fetch(`/api/search?query=${newSearch}`);
+            const apiUrl = process.env.NODE_ENV === 'production' 
+                ? 'https://react-node-app-five.vercel.app' 
+                : 'http://localhost:8080';
+
+            console.log(apiUrl);
+
+            const response = await fetch(`${apiUrl}/api/search?query=${newSearch}`);
             const data = await response.json();
 
             const articles = data["search-results"]["entry"] || [];

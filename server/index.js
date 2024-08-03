@@ -1,17 +1,26 @@
 const express = require('express');
 const path = require('path');
+const cors = require('cors');
 
-require('dotenv').config();
+require('dotenv').config({ path: path.resolve(__dirname, '.env') });
+
 
 const axios = require('axios');
 
 // app is an express application
 const app = express();
+const corsOptions = {
+    origin: 'https://react-node-app-five.vercel.app', // Your client’s URL
+    methods: ['GET'],
+    allowedHeaders: ['Content-Type'],
+  };
+app.use(cors(corsOptions));
 
 const PORT = 8080;
 
 
 const API_Key = process.env.SCOPUS_API_KEY;
+//console.log(API_Key);
 
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, '../client/dist')));
@@ -44,6 +53,8 @@ app.get('/*', function(req, res) {
 
 */ }
 
+
+
 // API call here
 // get cover image:
     // https://api.elsevier.com/content/serial/title/issn/{issn}
@@ -57,7 +68,8 @@ app.get('/*', function(req, res) {
 // NOTE: adding the parameter content=core to your request culls all “Response Not Found” messages.
 app.get('/api/search', async (req, res) => {
     const userQuery = req.query.query;
-
+    console.log(`Received query: ${userQuery}`);
+    //console.log(`https://api.elsevier.com/content/search/scopus?start=0&count=10&httpaccept=application/json&query=${userQuery}&APIKEY=${API_Key}&content=core&sort=relevancy;citedby-count`)
     try {
         const response = await axios.get(`https://api.elsevier.com/content/search/scopus?start=0&count=10&httpaccept=application/json&query=${userQuery}&APIKEY=${API_Key}&content=core&sort=relevancy;citedby-count`);
         res.json(response.data);
