@@ -10,11 +10,9 @@ const app = express();
 
 const PORT = 8080;
 
-const dir = __dirname + './client/public/';
 
 const API_Key = process.env.SCOPUS_API_KEY;
 
-console.log(API_Key);
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, '../client/dist')));
 
