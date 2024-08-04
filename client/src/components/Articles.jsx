@@ -48,7 +48,7 @@ export default function Articles() {
     const handleApiSearch = async (newSearch) => {
         try {
             const apiUrl = process.env.NODE_ENV === 'production' 
-                ? 'https://react-node-app-five.vercel.app' 
+                ? 'https://strength-science-api.vercel.app/' 
                 : 'http://localhost:8080';
 
             console.log(apiUrl);
