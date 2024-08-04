@@ -10,7 +10,11 @@ const axios = require('axios');
 // app is an express application
 const app = express();
 
-app.use(cors());
+const corsOptions = {
+    origin: 'https://strength-science-client.vercel.app', // Allow this specific origin
+    optionsSuccessStatus: 200,
+};
+app.use(cors(corsOptions));
 
 const PORT = process.env.PORT || 8080;
 
