@@ -9,14 +9,10 @@ const axios = require('axios');
 
 // app is an express application
 const app = express();
-const corsOptions = {
-    origin: 'https://react-node-app-five.vercel.app', // Your client’s URL
-    methods: ['GET'],
-    allowedHeaders: ['Content-Type'],
-  };
-app.use(cors(corsOptions));
 
-const PORT = 8080;
+app.use(cors());
+
+const PORT = process.env.PORT || 8080;
 
 
 const API_Key = process.env.SCOPUS_API_KEY;
